@@ -2,6 +2,12 @@ package main
 
 import "fmt"
 
+func Hello() string {
+	// Domain
+	return "Hello, world"
+}
+
 func main() {
-	fmt.Println("Hello, world")
+	// Side-effect
+	fmt.Println(Hello())
 }

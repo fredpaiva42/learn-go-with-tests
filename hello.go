@@ -2,12 +2,17 @@ package main
 
 import "fmt"
 
+const englishHelloPrefix = "Hello, "
+
 func Hello(name string) string {
 	// Domain
-	return "Hello, " + name
+	if name == "" {
+		name = "World"
+	}
+	return englishHelloPrefix + name
 }
 
 func main() {
 	// Side-effect
-	fmt.Println(Hello("world"))
+	fmt.Println(Hello(""))
 }
